@@ -36,6 +36,10 @@ io.on("connection", (socket) => {
   });
 });
 
+app.get('/', (req, res) => {
+  res.send('Oi kire kire modhue')
+})
+
 server.listen(5000, () => {
   console.log("✅ Server running on port 5000");
 });
