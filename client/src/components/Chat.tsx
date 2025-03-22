@@ -4,10 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { io } from "socket.io-client";
 
-const socket = io("https://chap-app-backend-iota.vercel.app/", {
-  transports: ["websocket", "polling"],  // WebSocket use korar try korte hobe
-  withCredentials: true
-});
+const socket = io("https://chap-app-backend-iota.vercel.app/");
 
 export default function Chat() {
   const router = useRouter();
