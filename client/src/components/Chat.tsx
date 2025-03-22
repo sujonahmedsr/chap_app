@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { io } from "socket.io-client";
 
-const socket = io("https://chap-app-backend-iota.vercel.app/");
+const socket = io("https://chap-app-1-yyt0.onrender.com/");
 
 export default function Chat() {
   const router = useRouter();
