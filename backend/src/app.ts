@@ -6,6 +6,8 @@ import { Server } from "socket.io";
 const app = express();
 const server = http.createServer(app);
 
+app.use(cors({origin: ["https://chap-app-neon.vercel.app"], credentials: true}))
+
 const io = new Server(server, {
   cors: {
     origin: "https://chap-app-neon.vercel.app",
