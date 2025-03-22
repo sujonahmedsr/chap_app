@@ -3,7 +3,9 @@ import Chat from "@/components/Chat";
 const ChatPage = () => {
 
   return (
+    <div>
       <Chat />
+    </div>
   );
 };
 
