@@ -15,8 +15,10 @@ app.use(cors({
 const io = new Server(server, {
   cors: {
     origin: "*", // Change this if needed
-    methods: ["GET", "POST"]
-  }
+    methods: ["GET", "POST"],
+    credentials: true
+  },
+  transports: ["websocket", "polling"]
 });
 
 io.on("connection", (socket) => {
