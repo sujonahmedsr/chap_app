@@ -1,12 +1,12 @@
+"use client";
+
+import { Suspense } from "react";
 import Chat from "@/components/Chat";
 
-const ChatPage = () => {
-
+export default function ChatPage() {
   return (
-    <div>
+    <Suspense fallback={<div>Loading chat...</div>}>
       <Chat />
-    </div>
+    </Suspense>
   );
-};
-
-export default ChatPage;
+}
