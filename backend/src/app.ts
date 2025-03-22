@@ -6,12 +6,17 @@ import { Server } from "socket.io";
 const app = express();
 const server = http.createServer(app);
 
-app.use(cors({origin: "*"}));
+app.use(cors({
+  origin: "*", // Allow all origins
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
-  },
+    origin: "*", // Change this if needed
+    methods: ["GET", "POST"]
+  }
 });
 
 io.on("connection", (socket) => {
